@@ -1,0 +1,43 @@
+@import '/src/app.module.scss';
+
+
+.register_container{
+    height: 100%;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url('../../assets/bg.png');
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    
+    .reg_title{
+        font-size: size(80);
+    }
+    .form{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        .reg_input{
+            height: size(100);
+            width: size(300);
+            border-radius: size(20);
+            border-left: 0.5px solid gray;
+            border-bottom: 0.5px solid gray;
+            font-size: size(20);
+            padding: size(15) size(25);
+            margin: size(10) 0;
+        } 
+
+        .reg_btn{
+            height: size(50);
+            width: size(200);
+            border-radius: size(20);
+            background-color: skyblue;  
+        }
+    }
+}

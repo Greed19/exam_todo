@@ -1,0 +1,44 @@
+@import '/src/app.module.scss';
+
+.login_container{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url('../../assets/bg.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    .login_title{
+        font-size: size(80);
+        margin: 0 0 size(20) ;
+    }
+    .form_container{
+        height: 50%;
+        display: flex;
+        flex-direction: column; 
+        align-items: center;
+        justify-content: space-between;
+        .input{
+            height: size(100);
+            width: size(300);
+            border-radius: size(20);
+            border-left: 0.5px solid gray;
+            border-bottom: 0.5px solid gray;
+            font-size: size(40);
+            padding: size(15) size(25);
+        }
+        .btnSubmit{
+            height: size(50);
+            width: size(200);
+            border-radius: size(20);
+            margin: 0 0 size(20);        
+        }
+    }
+    .toreg{
+        color: white;
+        cursor: pointer;
+    }
+}

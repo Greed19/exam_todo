@@ -1,0 +1,27 @@
+@import '/src/app.module.scss';
+
+.comment_container{
+    height: size(50);
+    padding: size(20);
+    width: size(400);
+    z-index: 100;      
+
+    .show_comment{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        
+        .comment_btn_container{
+            width: size(150);
+            display: flex;
+            justify-content: space-around;
+        }
+    }
+
+    .comment_input{
+        height: size(50);
+        border-radius: size(10);
+        margin: 0 size(20) 0 0;   
+        padding: size(5) size(10);     
+    }
+}

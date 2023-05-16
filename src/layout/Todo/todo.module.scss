@@ -1,0 +1,74 @@
+@import '/src/app.module.scss';
+
+.todo_container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url('../../assets/bg.png');
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100%;
+    .todo_header{
+        width: 100%;
+        height: size(100);
+        padding: size(20);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .todo_title{
+            font-size: size(80);
+        }
+        .user_logout{
+            height: size(50);
+            width: size(200);
+            border-radius: size(20);
+            background-color: skyblue;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+
+    .todo_form{
+        display: flex;        
+        justify-content: center;
+        align-items: center;
+        .input_container{
+            display: flex;
+            flex-direction: column;
+            .input_todo{
+                height: size(50);
+                width: size(300);
+                border-radius: 0 0 size(20) size(20);
+                // border-left: 0.5px solid gray;
+                // border-bottom: 0.5px solid gray;
+                font-size: size(20);
+                padding: size(15) size(25);
+                margin: size(5) size(15);
+        
+            }
+        }
+        
+        .addTodo{
+            height: size(50);
+            width: size(200);
+            border-radius: size(20);
+            background-color: skyblue;  
+        }
+    }
+
+    .todoList_container {
+        overflow-y: auto;
+        height: size(400);        
+    }
+
+    .delete_all_btn{
+        height: size(50);
+        width: size(200);
+        border-radius: size(20);
+        background-color: skyblue;  
+    }
+}

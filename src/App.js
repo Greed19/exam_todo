@@ -1,24 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
-
+import { useEffect } from 'react';
+import {Routes, Route, useNavigate} from 'react-router-dom'
+import Login from './layout/Login/Login';
+import Register from './layout/Register/Register';
+import Todo from './layout/Todo/Todo';
+import styles from './app.module.scss';
 function App() {
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const isUserLog = localStorage.getItem('user')
+    if(!!isUserLog){
+      navigate('/todo')
+    }else{
+      navigate('/')
+    }
+  },[])
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <main className={styles.app_container}>
+      <Routes>
+        <Route path='/' element={<Login />} />
+        <Route path='register' element={<Register />} />
+        <Route path='todo' element={<Todo />} />
+      </Routes>
+    </main>
   );
 }
 
